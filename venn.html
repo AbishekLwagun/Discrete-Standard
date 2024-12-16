@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive 3-Set Venn Diagram</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://benfred.github.io/venn.js/venn.js"></script>
+  <link rel="stylesheet" href="venn.css">
+</head>
+<body>
+  <div id="wrapper">
+    <div id="container">
+      <div id="venn"></div>
+    </div>
+    <div id="info-box">
+      <h4>Venn Diagram Visualization</h4>
+      <p>Click on the buttons below to highlight or reset areas of the Venn diagram.</p>
+      <div class="button-container">
+        <button class="set-button" onclick="highlightRegion('A ∩ B ∩ C', this)">A ∩ B ∩ C</button>
+        <button class="set-button" onclick="highlightRegion('A ∩ B', this)">A ∩ B</button>
+        <button class="set-button" onclick="highlightRegion('A ∩ C', this)">A ∩ C</button>
+        <button class="set-button" onclick="highlightRegion('B ∩ C', this)">B ∩ C</button>
+        <button class="set-button" onclick="highlightRegion('A ∪ B ∪ C', this)">A ∪ B ∪ C</button>
+        <button class="set-button" onclick="highlightRegion('A\'', this)">A'</button>
+        <button class="set-button" onclick="highlightRegion('B\'', this)">B'</button>
+        <button class="set-button" onclick="highlightRegion('C\'', this)">C'</button>
+        <button class="set-button" onclick="highlightRegion('(A ∩ B)\'', this)">(A ∩ B)′</button>
+        <button class="set-button" onclick="highlightRegion('(A ∪ B)\'', this)">(A ∪ B)′</button>
+        <button class="set-button" onclick="highlightRegion('(A ∪ B ∪ C)\'', this)">(A ∪ B ∪ C)′</button>
+        <button class="set-button" onclick="highlightRegion('B ∪ (A ∩ C\')', this)">B ∪ (A ∩ C′)</button>
+        <button class="set-button" onclick="highlightRegion('A ∪ (B ∩ C\')', this)">A ∪ (B ∩ C′)</button>
+        <button class="set-button" onclick="highlightRegion('B ∩ (A ∪ C\')', this)">B ∩ (A ∪ C′)</button>
+        <button class="set-button" onclick="highlightRegion('C ∩ (A ∪ B\')', this)">C ∩ (A ∪ B′)</button>
+        <button class="set-button" onclick="highlightRegion('A ∩ (B ∪ C\')', this)">A ∩ (B ∪ C′)</button>
+        <button class="set-button" onclick="highlightRegion('A ∪ (B ∩ C)', this)">A ∪ (B ∩ C)</button>
+        <button class="set-button" onclick="highlightRegion('B ∪ (A ∩ C)', this)">B ∪ (A ∩ C)</button>
+        <button class="set-button" onclick="highlightRegion('(A ∩ B) ∪ C', this)">(A ∩ B) ∪ C</button>
+        <button class="clear-button" onclick="resetColors()">Reset Colors</button>
+      </div>
+    </div>
+  </div>
+  <script src="venn.js"></script>
+</body>
+</html>

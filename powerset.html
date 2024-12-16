@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Set Visualization</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="powerset.css">
+</head>
+<body>
+    <div id="container">
+        <div id="header"></div>
+        <div id="wrapper">
+            <div id="visual">
+                <div class="final-ans">
+                    <p class="hint">
+                        Did you know? A power set contains all possible subsets of a given set, 
+                        including the empty set and the set itself. The size of the power set is \(2^n\), 
+                        where \(n\) is the number of elements in the original set!
+                    </p>
+                </div>
+            </div>
+            <div id="prompt">
+                <h1>Power Set Visualization</h1>
+                <h1>P(S)</h1>
+                <div id="usr-input">
+                    <textarea id="inputSet" placeholder="[e.g] : 1, 2, 3, 4"></textarea>
+                </div>
+                <button id="doMath">Generate</button>
+                <button id="clearInput">Clear</button>
+            </div>
+        </div>
+    </div>
+    <script src="powerset.js"></script>
+</body>
+</html>
